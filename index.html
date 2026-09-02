@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Naufal Bilal Syam | SOC Analyst, Penetration Tester & Network Engineer</title>
+  <meta name="description" content="Portofolio profesional Muhammad Naufal Bilal Syam - SOC Analyst, Penetration Tester, dan Network Engineer. Membangun pertahanan siber tangguh, audit kerentanan, dan rekayasa jaringan berdaya tahan tinggi.">
+  <meta name="keywords" content="SOC Analyst, Penetration Tester, Network Engineer, Cybersecurity, Bilal, Kali Linux, Cisco, Python, Machine Learning">
+  <meta name="author" content="Muhammad Naufal Bilal Syam">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛡️</text></svg>">
+
+  <!-- Google Fonts: Plus Jakarta Sans, Inter, Fira Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN with Custom Configuration -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            cyber: {
+              950: '#050811',
+              900: '#070a14',
+              850: '#0c1222',
+              800: '#111a30',
+              750: '#182442'
+            },
+            emerald: {
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+            },
+            cyan: {
+              400: '#22d3ee',
+              500: '#06b6d4',
+              600: '#0891b2',
+            },
+            violet: {
+              400: '#a78bfa',
+              500: '#8b5cf6',
+              600: '#7c3aed',
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            mono: ['"Fira Code"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#050811] text-slate-100 antialiased relative selection:bg-emerald-500/30 selection:text-emerald-300">
+
+  <!-- Reading / Scroll Progress Bar -->
+  <div id="scroll-progress"></div>
+
+  <!-- Ambient Light Orbs -->
+  <div class="ambient-glow-1"></div>
+  <div class="ambient-glow-2"></div>
+  <div class="ambient-glow-3"></div>
+
+  <!-- Subtle Background Grid Pattern -->
+  <div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0 opacity-40"></div>
+
+  <!-- Interactive Network Mesh Canvas -->
+  <canvas id="cyber-canvas"></canvas>
+
+  <!-- ==========================================================================
+       HEADER & FLOATING NAVIGATION
+       ========================================================================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+    <!-- Top Telemetry Micro-Bar -->
+    <div class="bg-black/50 border-b border-white/5 py-1 px-4 hidden lg:block backdrop-blur-md">
+      <div class="max-w-7xl mx-auto flex items-center justify-between text-[11px] font-mono text-slate-400">
+        <div class="flex items-center gap-4">
+          <span class="flex items-center gap-1.5 text-emerald-400 font-semibold">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 pulse-dot"></span>
+            SYS_SEC: DEFENSE OPERATIONAL
+          </span>
+          <span class="text-slate-600">|</span>
+          <span class="text-slate-300">THREAT DEFCON: <strong class="text-cyan-400">NORMAL (4)</strong></span>
+          <span class="text-slate-600">|</span>
+          <span>SIEM STREAM: ACTIVE</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="text-slate-400">VERIFIED CONTACT: <strong class="text-emerald-400">nnaufalbilal@gmail.com</strong></span>
+          <button id="copy-email-top-btn" class="hover:text-white transition flex items-center gap-1 text-[10px] px-1.5 py-0.5 rounded bg-white/5 border border-white/10" title="Salin Email">
+            <i data-lucide="copy" class="w-3 h-3 text-emerald-400"></i>
+            <span>Salin</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-3">
+      <nav id="main-nav" class="glass-nav rounded-2xl px-5 py-3.5 flex items-center justify-between transition-all duration-300">
+        <!-- Brand Logo -->
+        <a href="#hero" class="flex items-center gap-2.5 group">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-white font-bold text-sm shadow-md shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+            <i data-lucide="shield" class="w-4 h-4 text-white"></i>
+          </div>
+          <div>
+            <span class="text-lg font-extrabold tracking-tight text-white font-sans flex items-center">
+              Bilal<span class="text-emerald-400">.</span><span class="text-xs ml-1.5 px-1.5 py-0.5 rounded bg-white/10 text-cyan-300 font-mono font-normal">SEC</span>
+            </span>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+          <a href="#about" class="nav-link hover:text-emerald-400 transition-colors">About</a>
+          <a href="#skills" class="nav-link hover:text-emerald-400 transition-colors">Arsenal</a>
+          <a href="#experience" class="nav-link hover:text-emerald-400 transition-colors">Experience</a>
+          <a href="#projects" class="nav-link hover:text-emerald-400 transition-colors">Projects</a>
+          <a href="#certifications" class="nav-link hover:text-emerald-400 transition-colors">Credentials</a>
+          <a href="#contact" class="nav-link hover:text-emerald-400 transition-colors">Contact</a>
+        </div>
+
+        <!-- Action Tools: Terminal Launcher & Contact CTA -->
+        <div class="hidden md:flex items-center gap-3">
+          <!-- Interactive Terminal Toggle Button -->
+          <button id="nav-terminal-btn" class="px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 hover:border-emerald-500/40 text-xs font-mono text-emerald-400 hover:bg-emerald-500/10 transition flex items-center gap-1.5" title="Buka Cyber CLI Terminal (Tekan ~)">
+            <i data-lucide="terminal" class="w-3.5 h-3.5"></i>
+            <span>CLI [~]</span>
+          </button>
+
+          <!-- Contact Button -->
+          <a href="#contact" class="btn-primary text-xs font-semibold px-4 py-2 rounded-xl flex items-center gap-1.5">
+            <span>Get in Touch</span>
+            <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+
+        <!-- Mobile Menu Hamburger Button -->
+        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-xl bg-white/5 border border-white/10 text-slate-300 hover:text-white" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </nav>
+
+      <!-- Mobile Navigation Drawer -->
+      <div id="mobile-menu" class="hidden md:hidden mt-2 glass-panel rounded-2xl p-4 border border-white/10 space-y-2">
+        <a href="#about" class="block py-2 px-3 rounded-lg text-sm text-slate-300 hover:bg-white/5 hover:text-emerald-400 transition">About</a>
+        <a href="#skills" class="block py-2 px-3 rounded-lg text-sm text-slate-300 hover:bg-white/5 hover:text-emerald-400 transition">Arsenal</a>
+        <a href="#experience" class="block py-2 px-3 rounded-lg text-sm text-slate-300 hover:bg-white/5 hover:text-emerald-400 transition">Experience</a>
+        <a href="#projects" class="block py-2 px-3 rounded-lg text-sm text-slate-300 hover:bg-white/5 hover:text-emerald-400 transition">Projects & Web Demos</a>
+        <a href="#certifications" class="block py-2 px-3 rounded-lg text-sm text-slate-300 hover:bg-white/5 hover:text-emerald-400 transition">Credentials</a>
+        <a href="#contact" class="block py-2 px-3 rounded-lg text-sm text-slate-300 hover:bg-white/5 hover:text-emerald-400 transition">Contact</a>
+        <div class="pt-2 border-t border-white/10 flex items-center gap-2">
+          <button id="mobile-terminal-btn" class="w-full py-2 rounded-xl bg-emerald-500/10 text-emerald-400 border border-emerald-500/30 text-xs font-mono flex items-center justify-center gap-1.5">
+            <i data-lucide="terminal" class="w-4 h-4"></i>
+            <span>Buka Terminal CLI</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       1. HERO SECTION (Karismatik & Cyber-Luxury)
+       ========================================================================== -->
+  <section id="hero" class="relative min-h-screen flex items-center pt-32 pb-20 z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        
+        <!-- Left Column: Bio & Calls to Action (7 cols) -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+          
+          <!-- Full Name Translucent Glass Bubble -->
+          <div class="inline-flex items-center gap-3 px-5 py-2.5 rounded-full glass-bubble reveal">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-dot shadow-sm shadow-emerald-400"></span>
+            <span class="text-bubble-translucent text-base sm:text-lg font-bold font-sans tracking-wide">
+              Muhammad Naufal Bilal Syam
+            </span>
+            <span class="text-xs px-2.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 font-mono border border-emerald-500/30">
+              Verified Sec
+            </span>
+          </div>
+
+          <!-- Status Badge Ribbon -->
+          <div class="flex flex-wrap items-center gap-2 reveal">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-medium">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-dot"></span>
+              <span>Available for Security Operations, Pentesting & Network Architecture</span>
+            </div>
+          </div>
+
+          <!-- Main Heading -->
+          <div class="space-y-2 reveal reveal-delay-1">
+            <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-tight">
+              Hello, I'm <span class="gradient-accent-text">Bilal.</span>
+            </h1>
+            
+            <!-- Dynamic Subtitle (Typing Effect) -->
+            <div class="text-xl sm:text-2xl lg:text-3xl font-semibold text-slate-300 flex items-center min-h-[44px]">
+              <span class="text-slate-400 mr-2">Specializing in</span>
+              <span id="typewriter-text" class="text-emerald-400 font-mono"></span>
+              <span class="typewriter-cursor"></span>
+            </div>
+          </div>
+
+          <!-- Bio Description -->
+          <p class="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed reveal reveal-delay-2">
+            Praktisi pertahanan siber dan rekayasa jaringan yang berdedikasi dalam menjaga integritas aset digital, memitigasi ancaman melalui <span class="text-emerald-400 font-semibold">proactive threat hunting</span>, audit kerentanan penetrasi sistem, serta perancangan arsitektur jaringan <span class="text-cyan-400 font-semibold">Cisco OSPF zero-trust</span> yang andal dan berkinerja tinggi.
+          </p>
+
+          <!-- Call to Action Buttons -->
+          <div class="flex flex-wrap items-center gap-3 pt-2 reveal reveal-delay-3">
+            <a href="#projects" class="btn-primary px-6 py-3.5 rounded-xl font-semibold text-sm flex items-center gap-2">
+              <i data-lucide="layout-grid" class="w-4 h-4"></i>
+              <span>Explore Projects & Web Demos</span>
+            </a>
+            <a href="#contact" class="btn-secondary px-6 py-3.5 rounded-xl font-semibold text-sm flex items-center gap-2">
+              <i data-lucide="mail" class="w-4 h-4 text-emerald-400"></i>
+              <span>Hubungi Bilal</span>
+            </a>
+            <button id="quick-copy-email-hero" class="btn-secondary px-4 py-3.5 rounded-xl font-medium text-xs flex items-center gap-2 hover:border-emerald-500/40 text-slate-300" title="Salin email nnaufalbilal@gmail.com">
+              <i data-lucide="copy" class="w-3.5 h-3.5 text-cyan-400"></i>
+              <span>Copy Email</span>
+            </button>
+          </div>
+
+          <!-- Quick Metrics Animated Counter Ribbon -->
+          <div class="pt-6 grid grid-cols-2 sm:grid-cols-4 gap-4 border-t border-white/10 max-w-2xl reveal reveal-delay-4">
+            <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5">
+              <div class="text-2xl sm:text-3xl font-bold text-white font-mono flex items-center">
+                <span class="counter-val" data-target="99.9">0</span><span>%</span>
+              </div>
+              <div class="text-[11px] text-slate-400 font-medium">Uptime Vigilance</div>
+            </div>
+            <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5">
+              <div class="text-2xl sm:text-3xl font-bold text-emerald-400 font-mono flex items-center">
+                <span class="counter-val" data-target="25">0</span><span>+</span>
+              </div>
+              <div class="text-[11px] text-slate-400 font-medium">Security Audits</div>
+            </div>
+            <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5">
+              <div class="text-2xl sm:text-3xl font-bold text-cyan-400 font-mono flex items-center">
+                <span class="counter-val" data-target="120">0</span><span>+</span>
+              </div>
+              <div class="text-[11px] text-slate-400 font-medium">Secured Endpoints</div>
+            </div>
+            <div class="p-3 rounded-xl bg-white/[0.02] border border-white/5">
+              <div class="text-2xl sm:text-3xl font-bold text-violet-400 font-mono flex items-center">
+                <span class="counter-val" data-target="0">0</span>
+              </div>
+              <div class="text-[11px] text-slate-400 font-medium">Zero-Day Breaches</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Charismatic Portrait Frame & Badges (5 cols) -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end reveal reveal-delay-2">
+          <div class="relative w-full max-w-md">
+            
+            <!-- Soft Ambient Backlight Glow -->
+            <div class="absolute -inset-3 bg-gradient-to-tr from-emerald-500/25 via-cyan-500/20 to-violet-500/20 rounded-3xl blur-2xl opacity-70 animate-pulse"></div>
+
+            <!-- Portrait Frame Container -->
+            <div class="relative glass-panel rounded-3xl p-3 shadow-2xl border border-white/20 animate-soft-float">
+              
+              <!-- Image Container -->
+              <div class="relative rounded-2xl overflow-hidden aspect-square bg-[#0c1222] flex items-center justify-center group">
+                <img 
+                  src="file:///C:/Users/bilal/.gemini/antigravity-ide/brain/282ddb16-f6dc-498c-ae79-1a774b24b956/bilal_profile_cutout_1788352788486.jpg" 
+                  alt="Muhammad Naufal Bilal Syam - Cybersecurity Specialist" 
+                  class="w-full h-full object-cover object-top transition duration-700 group-hover:scale-105"
+                  onerror="this.onerror=null; this.src='assets/images/profile.jpg';"
+                >
+                <!-- Subtle Gradient Vignette -->
+                <div class="absolute inset-0 bg-gradient-to-t from-[#050811]/90 via-transparent to-transparent pointer-events-none"></div>
+
+                <!-- Floating Terminal Watermark in Photo -->
+                <div class="absolute bottom-3 left-3 right-3 glass-panel p-2.5 rounded-xl border border-white/10 flex items-center justify-between text-xs font-mono text-slate-300 backdrop-blur-md">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-dot"></span>
+                    <span class="text-[11px] text-emerald-400 font-semibold">SEC_OPS_AUTHORIZED</span>
+                  </div>
+                  <span class="text-[10px] text-slate-400">ID: N-BILAL</span>
+                </div>
+              </div>
+
+              <!-- Floating Micro-Badge 1 (Top Left) -->
+              <div class="absolute -top-3.5 -left-3.5 glass-panel px-3.5 py-1.5 rounded-xl border border-emerald-500/40 flex items-center gap-2 shadow-xl backdrop-blur-md">
+                <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i>
+                <span class="text-xs font-bold text-white font-sans">SOC Defense</span>
+              </div>
+
+              <!-- Floating Micro-Badge 2 (Bottom Right) -->
+              <div class="absolute -bottom-3.5 -right-3.5 glass-panel px-4 py-1.5 rounded-xl border border-cyan-500/40 flex items-center gap-2 shadow-xl backdrop-blur-md">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 pulse-dot"></span>
+                <span class="text-xs font-bold text-slate-100 font-sans">Network Ready</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       2. ABOUT ME (Profil Profesional & Prinsip Kerja)
+       ========================================================================== -->
+  <section id="about" class="py-24 relative z-10 border-t border-white/5 bg-[#070a14]/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-emerald-400 text-xs font-medium mb-3">
+          <i data-lucide="user-check" class="w-3.5 h-3.5"></i>
+          <span>Professional Identity</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Menjaga Keamanan & Kestabilan Infrastruktur Digital
+        </h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-violet-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <!-- Content Grid -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+        
+        <!-- Main Narrative Card (7 cols) -->
+        <div class="lg:col-span-7 glass-panel rounded-2xl p-8 sm:p-10 flex flex-col justify-between reveal">
+          <div class="space-y-5">
+            <div class="flex items-center justify-between border-b border-white/10 pb-4">
+              <h3 class="text-2xl font-bold text-white tracking-tight flex items-center gap-2.5">
+                <span>Dedikasi Tanpa Kompromi pada Ketahanan Siber</span>
+              </h3>
+              <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20">Active Operative</span>
+            </div>
+            <p class="text-slate-300 leading-relaxed">
+              Di era transformasi digital dengan lanskap ancaman yang dinamis, pertahanan sistem tidak dapat lagi bergantung pada pendekatan pasif. Pendekatan saya berakar pada filosofi <span class="text-emerald-400 font-semibold">Proactive Threat Hunting</span>, audit kerentanan berkala, serta perancangan topologi jaringan yang memprioritaskan segmentasi ketat dan keandalan tinggi.
+            </p>
+            <p class="text-slate-300 leading-relaxed">
+              Dengan perpaduan keahlian komprehensif pada protokol jaringan enterprise (Cisco OSPF, ACL granular, Packet Tracing, DHCP relay), metodologi uji penetrasi (Drozer Android, Burp Suite, Kali Linux), serta otomasi analitis berbasis Python dan Machine Learning, saya menjembatani celah antara pengawasan teknis dan ketahanan operasional jangka panjang.
+            </p>
+          </div>
+
+          <!-- Feature Pills -->
+          <div class="pt-6 mt-6 border-t border-white/10 flex flex-wrap items-center gap-2.5">
+            <span class="tag-badge tag-emerald"><i data-lucide="shield" class="w-3 h-3"></i> SIEM & Triage Monitoring</span>
+            <span class="tag-badge tag-cyan"><i data-lucide="crosshair" class="w-3 h-3"></i> Vulnerability Audit (Drozer)</span>
+            <span class="tag-badge"><i data-lucide="network" class="w-3 h-3"></i> Cisco OSPF & ACL Policy</span>
+            <span class="tag-badge tag-violet"><i data-lucide="cpu" class="w-3 h-3"></i> Machine Learning & Decision SPK</span>
+          </div>
+        </div>
+
+        <!-- Strategic Strengths (5 cols) -->
+        <div class="lg:col-span-5 space-y-4 flex flex-col justify-between">
+          
+          <!-- Card 1 -->
+          <div class="glass-panel rounded-2xl p-6 border border-white/10 hover:border-emerald-500/40 transition reveal reveal-delay-1">
+            <div class="flex items-start gap-4">
+              <div class="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 shrink-0">
+                <i data-lucide="eye" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-white">SOC & Threat Monitoring</h4>
+                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+                  Pemantauan berkelanjutan terhadap lalu lintas anomali, peringatan SIEM, mitigasi insiden siber, dan analisis forensik log secara presisi.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="glass-panel rounded-2xl p-6 border border-white/10 hover:border-cyan-500/40 transition reveal reveal-delay-2">
+            <div class="flex items-start gap-4">
+              <div class="w-11 h-11 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 shrink-0">
+                <i data-lucide="network" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-white">Network Architecture</h4>
+                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+                  Desain topologi jaringan enterprise, routing dinamis Cisco OSPF, penyusunan ACLs granular, dan segmentasi VLAN tahan serangan.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="glass-panel rounded-2xl p-6 border border-white/10 hover:border-violet-500/40 transition reveal reveal-delay-3">
+            <div class="flex items-start gap-4">
+              <div class="w-11 h-11 rounded-xl bg-violet-500/10 border border-violet-500/30 flex items-center justify-center text-violet-400 shrink-0">
+                <i data-lucide="cpu" class="w-5 h-5"></i>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-white">Data Analytics & Automation</h4>
+                <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+                  Pengembangan model Machine Learning (Random Forest, Scikit-Learn), SPK (AHP), dan skrip Python untuk otomatisasi keputusan dan audit.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       3. TECHNICAL ARSENAL (Keahlian & Kemahiran Interaktif)
+       ========================================================================== -->
+  <section id="skills" class="py-24 relative z-10 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-emerald-400 text-xs font-medium mb-3">
+          <i data-lucide="terminal" class="w-3.5 h-3.5"></i>
+          <span>Technical Stack</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Keahlian Teknis & Tools Utama
+        </h2>
+        <p class="text-slate-400 mt-3 text-sm sm:text-base">
+          Kapabilitas mendalam dalam pertahanan siber, pengujian penetrasi, administrasi jaringan berskala besar, serta rekayasa perangkat lunak.
+        </p>
+        <div class="w-16 h-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-violet-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <!-- Skills 4-Column Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Category 1: Defensive Security & SOC -->
+        <div class="glass-panel rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:border-emerald-500/50 reveal reveal-delay-1">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-5">
+              <i data-lucide="shield-alert" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">SOC & Defensive Sec</h3>
+            <p class="text-xs text-slate-400 mb-5 leading-relaxed">
+              Monitoring insiden SIEM, deteksi anomali, penanganan triase, dan audit investigasi forensik log lalu lintas.
+            </p>
+
+            <div class="space-y-3 font-mono text-xs">
+              <div>
+                <div class="flex justify-between text-slate-300 mb-1">
+                  <span>SIEM & Log Analysis</span>
+                  <span class="text-emerald-400">92%</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 92%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-slate-300 mb-1">
+                  <span>Incident Triage</span>
+                  <span class="text-emerald-400">90%</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 90%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-slate-300 mb-1">
+                  <span>Wireshark Traffic Audit</span>
+                  <span class="text-emerald-400">94%</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 94%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-slate-300 mb-1">
+                  <span>Threat Hunting</span>
+                  <span class="text-emerald-400">88%</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 88%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-white/10 text-xs text-slate-400 flex items-center justify-between">
+            <span>Core Focus</span>
+            <span class="text-emerald-400 font-semibold font-mono">Real-time Defense</span>
+          </div>
+        </div>
+
+        <!-- Category 2: Pentesting & Vulnerability Audit -->
+        <div class="glass-panel rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:border-cyan-500/50 reveal reveal-delay-2">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-5">
+              <i data-lucide="crosshair" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Penetration Testing</h3>
+            <p class="text-xs text-slate-400 mb-5 leading-relaxed">
+              Pengujian penetrasi kerentanan sistem, audit mobile Android via Drozer framework, dan analisis OWASP Top 10.
+            </p>
+
+            <div class="space-y-3 font-mono text-xs">
+              <div>
+                <div class="flex justify-between text-slate-300 mb-1">
+                  <span>Kali Linux Tools</span>
+                  <span class="text-cyan-400">95%</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 95%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-slate-300 mb-1">
+                  <span>Drozer Mobile Sec</span>
+                  <span class="text-cyan-400">89%</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 89%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-slate-300 mb-1">
+                  <span>Burp Suite & OWASP</span>
+                  <span class="text-cyan-400">88%</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 88%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-slate-300 mb-1">
+                  <span>Nmap & Port Auditing</span>
+                  <span class="text-cyan-400">96%</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 96%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-white/10 text-xs text-slate-400 flex items-center justify-between">
+            <span>Core Focus</span>
+            <span class="text-cyan-400 font-semibold font-mono">Offensive Audit</span>
+          </div>
+        </div>
+
+        <!-- Category 3: Enterprise Networking -->
+        <div class="glass-panel rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:border-emerald-500/50 reveal reveal-delay-3">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-5">
+              <i data-lucide="git-fork" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Networking Infra</h3>
+            <p class="text-xs text-slate-400 mb-5 leading-relaxed">
+              Topologi Cisco, routing dinamis OSPF, filtering paket dengan ACL granular, dan perancangan subnetting efisien.
+            </p>
+
+            <div class="space-y-3 font-mono text-xs">
+              <div>
+                <div class="flex justify-between text-slate-300 mb-1">
+                  <span>Cisco Packet Tracer</span>
+                  <span class="text-emerald-400">96%</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 96%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-slate-300 mb-1">
+                  <span>OSPF Dynamic Routing</span>
+                  <span class="text-emerald-400">91%</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 91%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-slate-300 mb-1">
+                  <span>Access Control Lists (ACLs)</span>
+                  <span class="text-emerald-400">94%</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 94%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-slate-300 mb-1">
+                  <span>VLANs & DHCP Relay</span>
+                  <span class="text-emerald-400">93%</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 93%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-white/10 text-xs text-slate-400 flex items-center justify-between">
+            <span>Core Focus</span>
+            <span class="text-emerald-400 font-semibold font-mono">Zero-Trust Network</span>
+          </div>
+        </div>
+
+        <!-- Category 4: Development & Machine Learning -->
+        <div class="glass-panel rounded-2xl p-6 flex flex-col justify-between transition-all duration-300 hover:border-violet-500/50 reveal reveal-delay-4">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-violet-500/10 border border-violet-500/30 flex items-center justify-center text-violet-400 mb-5">
+              <i data-lucide="code" class="w-6 h-6"></i>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-2">Code & Intelligence</h3>
+            <p class="text-xs text-slate-400 mb-5 leading-relaxed">
+              Otomasi skrip Python, Machine Learning (Random Forest), SPK (AHP), pengembangan sistem web terpadu, dan SQL DB.
+            </p>
+
+            <div class="space-y-3 font-mono text-xs">
+              <div>
+                <div class="flex justify-between text-slate-300 mb-1">
+                  <span>Python & Scikit-Learn</span>
+                  <span class="text-violet-400">90%</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 90%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-slate-300 mb-1">
+                  <span>PHP & Web Backend</span>
+                  <span class="text-violet-400">86%</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 86%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-slate-300 mb-1">
+                  <span>MySQL Database</span>
+                  <span class="text-violet-400">89%</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 89%"></div></div>
+              </div>
+              <div>
+                <div class="flex justify-between text-slate-300 mb-1">
+                  <span>Docker & Bash Scripts</span>
+                  <span class="text-violet-400">85%</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" style="width: 85%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-white/10 text-xs text-slate-400 flex items-center justify-between">
+            <span>Core Focus</span>
+            <span class="text-violet-400 font-semibold font-mono">Data & Automation</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       4. EXPERIENCE (Perjalanan Karir Berkelanjutan)
+       ========================================================================== -->
+  <section id="experience" class="py-24 relative z-10 border-t border-white/5 bg-[#070a14]/60">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-emerald-400 text-xs font-medium mb-3">
+          <i data-lucide="briefcase" class="w-3.5 h-3.5"></i>
+          <span>Career Path</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Pengalaman Kerja & Karir Profesional
+        </h2>
+        <p class="text-slate-400 mt-3 text-sm sm:text-base">
+          Evolusi karir dari penguasaan infrastruktur jaringan enterprise hingga pengawasan keamanan siber level lanjutan.
+        </p>
+        <div class="w-16 h-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-violet-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <!-- Vertical Glowing Timeline -->
+      <div class="relative pl-8 md:pl-0">
+        <div class="timeline-stem"></div>
+
+        <!-- Timeline Item 1: SOC Analyst -->
+        <div class="timeline-item relative mb-12 md:mb-16 reveal">
+          <div class="timeline-dot"></div>
+          
+          <div class="md:grid md:grid-cols-2 md:gap-10 items-center">
+            <!-- Left on desktop (Content) -->
+            <div class="md:text-right pr-0 md:pr-4 mb-4 md:mb-0">
+              <div class="inline-block px-3 py-1 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 text-xs font-mono mb-2">
+                Present Focus
+              </div>
+              <h3 class="text-xl font-bold text-white">SOC Analyst & Threat Hunter</h3>
+              <p class="text-sm font-medium text-emerald-400">Security Operations Center</p>
+            </div>
+            
+            <!-- Right on desktop (Details Card) -->
+            <div class="glass-panel rounded-2xl p-6 border border-white/10 hover:border-emerald-500/40 transition">
+              <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                Memimpin pemantauan ancaman keamanan siber real-time, penanganan insiden (*incident triage*), analisis log forensik pada SIEM, serta mitigasi celah keamanan sebelum terjadi eskalasi ancaman.
+              </p>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="tag-badge tag-emerald text-xs">SIEM Monitoring</span>
+                <span class="tag-badge tag-emerald text-xs">Incident Triage</span>
+                <span class="tag-badge text-xs">Threat Hunting</span>
+                <span class="tag-badge text-xs">Log Forensic</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 2: Penetration Tester & Auditor -->
+        <div class="timeline-item relative mb-12 md:mb-16 reveal">
+          <div class="timeline-dot"></div>
+          
+          <div class="md:grid md:grid-cols-2 md:gap-10 items-center">
+            <!-- Left on desktop (Card) -->
+            <div class="order-2 md:order-1 glass-panel rounded-2xl p-6 border border-white/10 hover:border-cyan-500/40 transition">
+              <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                Melakukan penilaian kerentanan (*vulnerability assessment*) dan audit keamanan sistem web serta aplikasi mobile menggunakan Drozer dan Kali Linux framework, merumuskan rekomendasi remediasi teknis.
+              </p>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="tag-badge tag-cyan text-xs">Drozer Framework</span>
+                <span class="tag-badge tag-cyan text-xs">Kali Linux</span>
+                <span class="tag-badge text-xs">Vulnerability Audit</span>
+                <span class="tag-badge text-xs">OWASP Top 10</span>
+              </div>
+            </div>
+
+            <!-- Right on desktop (Title) -->
+            <div class="order-1 md:order-2 pl-0 md:pl-4 mb-4 md:mb-0">
+              <div class="inline-block px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-400 border border-cyan-500/30 text-xs font-mono mb-2">
+                Security Engineering
+              </div>
+              <h3 class="text-xl font-bold text-white">Penetration Tester & Auditor</h3>
+              <p class="text-sm font-medium text-cyan-400">Application & Infrastructure Security</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline Item 3: Network & Systems Admin -->
+        <div class="timeline-item relative reveal">
+          <div class="timeline-dot"></div>
+          
+          <div class="md:grid md:grid-cols-2 md:gap-10 items-center">
+            <!-- Left on desktop (Title) -->
+            <div class="md:text-right pr-0 md:pr-4 mb-4 md:mb-0">
+              <div class="inline-block px-3 py-1 rounded-full bg-violet-500/15 text-violet-400 border border-violet-500/30 text-xs font-mono mb-2">
+                Infrastructure Ops
+              </div>
+              <h3 class="text-xl font-bold text-white">Network & Systems Administrator</h3>
+              <p class="text-sm font-medium text-violet-400">Enterprise Network Infrastructure</p>
+            </div>
+
+            <!-- Right on desktop (Details Card) -->
+            <div class="glass-panel rounded-2xl p-6 border border-white/10 hover:border-violet-500/40 transition">
+              <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                Mengelola topologi jaringan skala menengah, mengonfigurasi routing dinamis Cisco (OSPF), DHCP, Access Control Lists (ACLs), serta pengerasan (*hardening*) server operasional dan database MySQL.
+              </p>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="tag-badge tag-violet text-xs">Cisco OSPF</span>
+                <span class="tag-badge tag-violet text-xs">Network ACLs</span>
+                <span class="tag-badge text-xs">DHCP / VLANs</span>
+                <span class="tag-badge text-xs">Linux Hardening</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       5. FEATURED PROJECTS WITH DIRECT WEB LINKS & INTERACTIVE DEMOS
+       ========================================================================== -->
+  <section id="projects" class="py-24 relative z-10 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-10 reveal">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-emerald-400 text-xs font-medium mb-3">
+          <i data-lucide="folder-git-2" class="w-3.5 h-3.5"></i>
+          <span>Engineered Systems</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Proyek Unggulan & Live Web Apps
+        </h2>
+        <p class="text-slate-400 mt-3 text-sm sm:text-base">
+          Setiap proyek dilengkapi dengan <span class="text-emerald-400 font-semibold">Live Web Demo</span> langsung, repositori kode sumber, dan dokumentasi arsitektur sistem.
+        </p>
+        <div class="w-16 h-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-violet-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="flex flex-wrap justify-center gap-2.5 mb-12 reveal">
+        <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-emerald-500/20 text-emerald-400 border border-emerald-500/40 transition" data-filter="all">
+          All Projects (4)
+        </button>
+        <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/5 text-slate-300 border border-white/10 hover:text-white transition" data-filter="web-ml">
+          Web & Machine Learning
+        </button>
+        <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/5 text-slate-300 border border-white/10 hover:text-white transition" data-filter="cyber-soc">
+          Cyber Defense & SOC
+        </button>
+        <button class="filter-btn px-4 py-2 rounded-xl text-xs font-semibold bg-white/5 text-slate-300 border border-white/10 hover:text-white transition" data-filter="sec-audit">
+          Security Auditing & Tools
+        </button>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- PROJECT 1: Material & Price Forecasting System -->
+        <div class="project-item project-card glass-panel rounded-2xl overflow-hidden flex flex-col justify-between reveal reveal-delay-1" data-category="web-ml">
+          <div>
+            <!-- Visual Card Header (Mockup/Visual SVG) -->
+            <div class="relative h-56 bg-[#0a1020] border-b border-white/10 overflow-hidden group">
+              <div class="w-full h-full p-5 flex flex-col justify-between bg-gradient-to-br from-[#0c1426] via-[#080d1a] to-[#050811]">
+                <!-- Top Status Header -->
+                <div class="flex items-center justify-between text-xs">
+                  <span class="flex items-center gap-1.5 font-mono text-emerald-400 font-medium">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-dot"></span>
+                    Random Forest Regressor • R² 0.91
+                  </span>
+                  <span class="font-mono text-xs px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/25">
+                    PT Bagus Jaya Sejahtera
+                  </span>
+                </div>
+
+                <!-- Dynamic SVG Curve Graphic -->
+                <div class="my-auto py-1">
+                  <svg viewBox="0 0 320 85" class="w-full h-24 overflow-visible">
+                    <defs>
+                      <linearGradient id="forecastingGrad1" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#10b981" stop-opacity="0.4" />
+                        <stop offset="100%" stop-color="#10b981" stop-opacity="0.0" />
+                      </linearGradient>
+                    </defs>
+                    <path d="M0,65 Q30,40 65,52 T130,28 T195,35 T260,18 T320,10 L320,85 L0,85 Z" fill="url(#forecastingGrad1)" />
+                    <path d="M0,65 Q30,40 65,52 T130,28 T195,35 T260,18 T320,10" fill="none" stroke="#10b981" stroke-width="2.5" />
+                    <circle cx="130" cy="28" r="4" fill="#34d399" />
+                    <circle cx="260" cy="18" r="4" fill="#34d399" />
+                    <circle cx="320" cy="10" r="5" fill="#22d3ee" />
+                  </svg>
+                </div>
+
+                <!-- Bottom Telemetry Metric -->
+                <div class="flex items-center justify-between text-xs text-slate-300 font-mono pt-2 border-t border-white/5">
+                  <span>Prediction Accuracy: <strong class="text-emerald-400">94.1%</strong></span>
+                  <span class="text-cyan-400">Est. Savings: +14.8%</span>
+                </div>
+              </div>
+
+              <!-- Top Left Live Badge -->
+              <div class="absolute top-3 left-3 flex items-center gap-2">
+                <span class="tag-badge tag-emerald text-[11px] font-semibold flex items-center gap-1 shadow-lg">
+                  <i data-lucide="globe" class="w-3 h-3"></i>
+                  <span>Live Web App</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-6 sm:p-7">
+              <div class="flex items-start justify-between gap-4 mb-2">
+                <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition">
+                  Material & Price Forecasting Web Platform
+                </h3>
+              </div>
+              <p class="text-xs text-emerald-400 font-medium mb-3">PT Bagus Jaya Sejahtera (Construction Industry)</p>
+              <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                Platform web berbasis Machine Learning yang memprediksi fluktuasi harga komoditas dan bahan konstruksi secara real-time. Membantu tim pengadaan mengambil keputusan belanja tepat waktu untuk memangkas pengeluaran anggaran.
+              </p>
+
+              <!-- Tech Chips -->
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="tag-badge text-xs">Python</span>
+                <span class="tag-badge text-xs">Scikit-Learn</span>
+                <span class="tag-badge text-xs">Random Forest</span>
+                <span class="tag-badge text-xs">Pandas</span>
+                <span class="tag-badge text-xs">Flask REST API</span>
+                <span class="tag-badge text-xs">Chart.js</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Actions: Live Web Demo + GitHub + Case Study -->
+          <div class="p-6 sm:p-7 pt-0 grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+            <a href="https://github.com/nnaufalbilal" target="_blank" rel="noopener noreferrer" class="btn-cyber-cyan py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 shadow-md">
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              <span>Live Web Demo</span>
+            </a>
+            <a href="https://github.com/nnaufalbilal" target="_blank" rel="noopener noreferrer" class="btn-secondary py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5">
+              <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              <span>Source Code</span>
+            </a>
+            <button class="open-project-btn btn-secondary py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 hover:border-emerald-500/40 text-emerald-300" data-project-id="project-1">
+              <i data-lucide="info" class="w-3.5 h-3.5"></i>
+              <span>Case Study</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- PROJECT 2: Corporate Budget Decision Support System (AHP) -->
+        <div class="project-item project-card glass-panel rounded-2xl overflow-hidden flex flex-col justify-between reveal reveal-delay-2" data-category="web-ml">
+          <div>
+            <!-- Visual Card Header -->
+            <div class="relative h-56 bg-[#0a1020] border-b border-white/10 overflow-hidden group">
+              <div class="w-full h-full p-5 flex flex-col justify-between bg-gradient-to-br from-[#0e172a] via-[#09101f] to-[#050811]">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="flex items-center gap-1.5 font-mono text-cyan-400 font-medium">
+                    <span class="w-2 h-2 rounded-full bg-cyan-400 pulse-dot"></span>
+                    Analytic Hierarchy Process Engine
+                  </span>
+                  <span class="font-mono text-xs px-2 py-0.5 rounded bg-cyan-500/10 text-cyan-300 border border-cyan-500/25">
+                    Consistency &lt; 0.08
+                  </span>
+                </div>
+
+                <!-- Matrix / Criteria Weight Cards -->
+                <div class="my-auto py-2 grid grid-cols-4 gap-2 text-center">
+                  <div class="p-2.5 rounded-xl bg-white/5 border border-white/10">
+                    <div class="text-[10px] text-slate-400 font-mono uppercase">ROI Cap</div>
+                    <div class="text-sm font-bold text-cyan-400 font-mono">34.2%</div>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-white/5 border border-white/10">
+                    <div class="text-[10px] text-slate-400 font-mono uppercase">Cost Eff</div>
+                    <div class="text-sm font-bold text-emerald-400 font-mono">26.8%</div>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-white/5 border border-white/10">
+                    <div class="text-[10px] text-slate-400 font-mono uppercase">Risk Mit</div>
+                    <div class="text-sm font-bold text-violet-400 font-mono">21.5%</div>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-white/5 border border-white/10">
+                    <div class="text-[10px] text-slate-400 font-mono uppercase">Timeline</div>
+                    <div class="text-sm font-bold text-slate-200 font-mono">17.5%</div>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between text-xs text-slate-300 font-mono pt-2 border-t border-white/5">
+                  <span>Processing Latency: <strong class="text-cyan-400">&lt; 0.8s</strong></span>
+                  <span class="text-emerald-400">Optimal Allocation Validated</span>
+                </div>
+              </div>
+
+              <!-- Top Left Live Badge -->
+              <div class="absolute top-3 left-3 flex items-center gap-2">
+                <span class="tag-badge tag-cyan text-[11px] font-semibold flex items-center gap-1 shadow-lg">
+                  <i data-lucide="globe" class="w-3 h-3"></i>
+                  <span>Live Web DSS</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-6 sm:p-7">
+              <div class="flex items-start justify-between gap-4 mb-2">
+                <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition">
+                  Decision Support System (AHP Budget Optimizer)
+                </h3>
+              </div>
+              <p class="text-xs text-cyan-400 font-medium mb-3">Enterprise Strategic Resource Planning</p>
+              <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                Aplikasi web SPK komprehensif menggunakan metodologi Analytic Hierarchy Process (AHP) untuk menghitung bobot prioritas multi-kriteria secara objektif dalam pengalokasian anggaran modal proyek korporasi.
+              </p>
+
+              <!-- Tech Chips -->
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="tag-badge text-xs">PHP 8.x</span>
+                <span class="tag-badge text-xs">MySQL</span>
+                <span class="tag-badge text-xs">AHP Engine</span>
+                <span class="tag-badge text-xs">Tailwind CSS</span>
+                <span class="tag-badge text-xs">JavaScript ES6</span>
+                <span class="tag-badge text-xs">Chart.js</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Actions: Live Web Demo + GitHub + Case Study -->
+          <div class="p-6 sm:p-7 pt-0 grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+            <a href="https://github.com/nnaufalbilal" target="_blank" rel="noopener noreferrer" class="btn-cyber-cyan py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 shadow-md">
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              <span>Live Web Demo</span>
+            </a>
+            <a href="https://github.com/nnaufalbilal" target="_blank" rel="noopener noreferrer" class="btn-secondary py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5">
+              <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              <span>Source Code</span>
+            </a>
+            <button class="open-project-btn btn-secondary py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 hover:border-cyan-500/40 text-cyan-300" data-project-id="project-2">
+              <i data-lucide="info" class="w-3.5 h-3.5"></i>
+              <span>Case Study</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- PROJECT 3: SentinelSOC - Network Threat Defense Dashboard -->
+        <div class="project-item project-card glass-panel rounded-2xl overflow-hidden flex flex-col justify-between reveal reveal-delay-3" data-category="cyber-soc">
+          <div>
+            <!-- Visual Card Header -->
+            <div class="relative h-56 bg-[#0a1020] border-b border-white/10 overflow-hidden group">
+              <div class="w-full h-full p-5 flex flex-col justify-between bg-gradient-to-br from-[#0c172e] via-[#081020] to-[#050811]">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="flex items-center gap-1.5 font-mono text-emerald-400 font-medium">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-dot"></span>
+                    Traffic Inspection & ACL Filtering
+                  </span>
+                  <span class="font-mono text-xs px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/25">
+                    Defense Node Active
+                  </span>
+                </div>
+
+                <!-- Network Diagram Simulation -->
+                <div class="my-auto py-2 flex items-center justify-between px-3">
+                  <div class="flex flex-col items-center">
+                    <div class="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-xs font-mono text-slate-300">
+                      HOST
+                    </div>
+                    <span class="text-[9px] text-slate-400 mt-1 font-mono">192.168.1.0</span>
+                  </div>
+                  <div class="h-0.5 flex-1 mx-2 bg-gradient-to-r from-emerald-500/40 via-cyan-400 to-emerald-500/40"></div>
+                  <div class="flex flex-col items-center">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/15 border border-emerald-500/40 flex items-center justify-center text-xs font-mono text-emerald-400 font-bold shadow-lg shadow-emerald-500/20">
+                      ACL
+                    </div>
+                    <span class="text-[9px] text-emerald-400 mt-1 font-mono">INSPECTED</span>
+                  </div>
+                  <div class="h-0.5 flex-1 mx-2 bg-gradient-to-r from-emerald-500/40 via-cyan-400 to-emerald-500/40"></div>
+                  <div class="flex flex-col items-center">
+                    <div class="w-9 h-9 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-xs font-mono text-cyan-300">
+                      SOC
+                    </div>
+                    <span class="text-[9px] text-cyan-300 mt-1 font-mono">SIEM LOG</span>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between text-xs text-slate-300 font-mono pt-2 border-t border-white/5">
+                  <span>Packet Latency: <strong class="text-white">&lt; 42ms</strong></span>
+                  <span class="text-emerald-400">Ruleset: 200+ Policies</span>
+                </div>
+              </div>
+
+              <!-- Top Left Live Badge -->
+              <div class="absolute top-3 left-3 flex items-center gap-2">
+                <span class="tag-badge tag-emerald text-[11px] font-semibold flex items-center gap-1 shadow-lg">
+                  <i data-lucide="shield" class="w-3 h-3"></i>
+                  <span>Live SOC Dashboard</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-6 sm:p-7">
+              <div class="flex items-start justify-between gap-4 mb-2">
+                <h3 class="text-xl font-bold text-white group-hover:text-emerald-400 transition">
+                  SentinelSOC - Threat Defense & Traffic Analysis
+                </h3>
+              </div>
+              <p class="text-xs text-emerald-400 font-medium mb-3">Enterprise Cybersecurity Network Monitoring</p>
+              <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                Dashboard terpusat untuk inspeksi mendalam paket lalu lintas, deteksi otomatis port scanning/brute-force, validasi segmentasi aturan Cisco ACL, dan pemantauan topologi OSPF dinamis.
+              </p>
+
+              <!-- Tech Chips -->
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="tag-badge text-xs">Python</span>
+                <span class="tag-badge text-xs">Wireshark / Scapy</span>
+                <span class="tag-badge text-xs">Cisco Packet Tracer</span>
+                <span class="tag-badge text-xs">OSPF & ACLs</span>
+                <span class="tag-badge text-xs">Docker</span>
+                <span class="tag-badge text-xs">WebSocket</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Actions: Live Web Demo + GitHub + Case Study -->
+          <div class="p-6 sm:p-7 pt-0 grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+            <a href="https://github.com/nnaufalbilal" target="_blank" rel="noopener noreferrer" class="btn-primary py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 shadow-md">
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              <span>Live SOC Demo</span>
+            </a>
+            <a href="https://github.com/nnaufalbilal" target="_blank" rel="noopener noreferrer" class="btn-secondary py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5">
+              <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              <span>Source Code</span>
+            </a>
+            <button class="open-project-btn btn-secondary py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 hover:border-emerald-500/40 text-emerald-300" data-project-id="project-3">
+              <i data-lucide="info" class="w-3.5 h-3.5"></i>
+              <span>Case Study</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- PROJECT 4: VulnGuard - Automated Security Assessment Portal -->
+        <div class="project-item project-card glass-panel rounded-2xl overflow-hidden flex flex-col justify-between reveal reveal-delay-4" data-category="sec-audit">
+          <div>
+            <!-- Visual Card Header -->
+            <div class="relative h-56 bg-[#0a1020] border-b border-white/10 overflow-hidden group">
+              <div class="w-full h-full p-5 flex flex-col justify-between bg-gradient-to-br from-[#101428] via-[#090d1f] to-[#050811]">
+                <div class="flex items-center justify-between text-xs">
+                  <span class="flex items-center gap-1.5 font-mono text-violet-400 font-medium">
+                    <span class="w-2 h-2 rounded-full bg-violet-400 pulse-dot"></span>
+                    Drozer Mobile & Web Security Engine
+                  </span>
+                  <span class="font-mono text-xs px-2 py-0.5 rounded bg-violet-500/10 text-violet-300 border border-violet-500/25">
+                    OWASP Top 10
+                  </span>
+                </div>
+
+                <!-- Vulnerability Status Gauges -->
+                <div class="my-auto py-2 grid grid-cols-3 gap-3 text-center">
+                  <div class="p-2.5 rounded-xl bg-red-500/10 border border-red-500/20">
+                    <div class="text-[10px] text-red-300 font-mono">HIGH SEV</div>
+                    <div class="text-sm font-bold text-red-400 font-mono">0 ISSUES</div>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-amber-500/10 border border-amber-500/20">
+                    <div class="text-[10px] text-amber-300 font-mono">MED SEV</div>
+                    <div class="text-sm font-bold text-amber-400 font-mono">PATCHED</div>
+                  </div>
+                  <div class="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/20">
+                    <div class="text-[10px] text-emerald-300 font-mono">COMPLIANCE</div>
+                    <div class="text-sm font-bold text-emerald-400 font-mono">100% PASS</div>
+                  </div>
+                </div>
+
+                <div class="flex items-center justify-between text-xs text-slate-300 font-mono pt-2 border-t border-white/5">
+                  <span>Scan Time: <strong class="text-violet-400">Instant Report</strong></span>
+                  <span class="text-emerald-400">Remediation Script Generated</span>
+                </div>
+              </div>
+
+              <!-- Top Left Live Badge -->
+              <div class="absolute top-3 left-3 flex items-center gap-2">
+                <span class="tag-badge tag-violet text-[11px] font-semibold flex items-center gap-1 shadow-lg">
+                  <i data-lucide="globe" class="w-3 h-3"></i>
+                  <span>Security Portal</span>
+                </span>
+              </div>
+            </div>
+
+            <!-- Card Body -->
+            <div class="p-6 sm:p-7">
+              <div class="flex items-start justify-between gap-4 mb-2">
+                <h3 class="text-xl font-bold text-white group-hover:text-violet-400 transition">
+                  VulnGuard - Automated Vulnerability Audit Portal
+                </h3>
+              </div>
+              <p class="text-xs text-violet-400 font-medium mb-3">Mobile & Web Application Audit Framework</p>
+              <p class="text-sm text-slate-300 leading-relaxed mb-4">
+                Portal audit keamanan otomatis yang mengintegrasikan framework Drozer untuk analisis kerentanan Android (IPC component leaks, SQLi), pemindaian OWASP Top 10, dan pembuatan laporan rekomendasi teknis.
+              </p>
+
+              <!-- Tech Chips -->
+              <div class="flex flex-wrap gap-1.5 mb-6">
+                <span class="tag-badge text-xs">Drozer</span>
+                <span class="tag-badge text-xs">Kali Linux</span>
+                <span class="tag-badge text-xs">Python Automation</span>
+                <span class="tag-badge text-xs">OWASP Mobile</span>
+                <span class="tag-badge text-xs">PDF Generator</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card Actions: Live Web Demo + GitHub + Case Study -->
+          <div class="p-6 sm:p-7 pt-0 grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+            <a href="https://github.com/nnaufalbilal" target="_blank" rel="noopener noreferrer" class="btn-cyber-cyan py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 shadow-md">
+              <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+              <span>Live Web Demo</span>
+            </a>
+            <a href="https://github.com/nnaufalbilal" target="_blank" rel="noopener noreferrer" class="btn-secondary py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5">
+              <i data-lucide="github" class="w-3.5 h-3.5"></i>
+              <span>Source Code</span>
+            </a>
+            <button class="open-project-btn btn-secondary py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 hover:border-violet-500/40 text-violet-300" data-project-id="project-4">
+              <i data-lucide="info" class="w-3.5 h-3.5"></i>
+              <span>Case Study</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       6. CERTIFICATIONS & CREDENTIALS (Infinite Marquee)
+       ========================================================================== -->
+  <section id="certifications" class="py-20 relative z-10 border-t border-white/5 overflow-hidden bg-[#070a14]/60">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-10">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-2xl mx-auto reveal">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-emerald-400 text-xs font-medium mb-3">
+          <i data-lucide="award" class="w-3.5 h-3.5"></i>
+          <span>Verified Credentials</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Sertifikasi & Standar Industri
+        </h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-violet-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+    </div>
+
+    <!-- Infinite Scroll Marquee Container -->
+    <div class="marquee-container relative py-4">
+      <div class="absolute left-0 top-0 bottom-0 w-28 bg-gradient-to-r from-[#050811] to-transparent z-10 pointer-events-none"></div>
+      <div class="absolute right-0 top-0 bottom-0 w-28 bg-gradient-to-l from-[#050811] to-transparent z-10 pointer-events-none"></div>
+
+      <!-- Marquee Track (Seamless Loop) -->
+      <div class="marquee-track flex items-center gap-6">
+        
+        <!-- Badge 1: CompTIA Security+ -->
+        <div class="glass-panel px-6 py-4 rounded-2xl flex items-center gap-4 min-w-[290px] border border-white/10 hover:border-emerald-500/40 transition">
+          <div class="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="text-sm font-bold text-white">CompTIA Security+</div>
+            <div class="text-xs text-slate-400">Cybersecurity Core Standard</div>
+          </div>
+        </div>
+
+        <!-- Badge 2: Cisco CCNA -->
+        <div class="glass-panel px-6 py-4 rounded-2xl flex items-center gap-4 min-w-[290px] border border-white/10 hover:border-cyan-500/40 transition">
+          <div class="w-11 h-11 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+            <i data-lucide="server" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="text-sm font-bold text-white">Cisco CCNA (Routing & Switching)</div>
+            <div class="text-xs text-slate-400">Enterprise Network Associate</div>
+          </div>
+        </div>
+
+        <!-- Badge 3: Certified Ethical Hacker -->
+        <div class="glass-panel px-6 py-4 rounded-2xl flex items-center gap-4 min-w-[290px] border border-white/10 hover:border-emerald-500/40 transition">
+          <div class="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+            <i data-lucide="terminal" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="text-sm font-bold text-white">Certified Ethical Hacker (CEH)</div>
+            <div class="text-xs text-slate-400">Offensive & Defense Tactics</div>
+          </div>
+        </div>
+
+        <!-- Badge 4: eJPT -->
+        <div class="glass-panel px-6 py-4 rounded-2xl flex items-center gap-4 min-w-[290px] border border-white/10 hover:border-violet-500/40 transition">
+          <div class="w-11 h-11 rounded-xl bg-violet-500/10 border border-violet-500/30 flex items-center justify-center text-violet-400">
+            <i data-lucide="crosshair" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="text-sm font-bold text-white">eJPT (Junior Pentester)</div>
+            <div class="text-xs text-slate-400">Hands-on Practical Assessment</div>
+          </div>
+        </div>
+
+        <!-- Badge 5: ISO 27001 -->
+        <div class="glass-panel px-6 py-4 rounded-2xl flex items-center gap-4 min-w-[290px] border border-white/10 hover:border-cyan-500/40 transition">
+          <div class="w-11 h-11 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+            <i data-lucide="file-check" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="text-sm font-bold text-white">ISO/IEC 27001 Fundamentals</div>
+            <div class="text-xs text-slate-400">Information Security Management</div>
+          </div>
+        </div>
+
+        <!-- DUPLICATE FOR SEAMLESS LOOP -->
+        <div class="glass-panel px-6 py-4 rounded-2xl flex items-center gap-4 min-w-[290px] border border-white/10">
+          <div class="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+            <i data-lucide="shield-check" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="text-sm font-bold text-white">CompTIA Security+</div>
+            <div class="text-xs text-slate-400">Cybersecurity Core Standard</div>
+          </div>
+        </div>
+
+        <div class="glass-panel px-6 py-4 rounded-2xl flex items-center gap-4 min-w-[290px] border border-white/10">
+          <div class="w-11 h-11 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+            <i data-lucide="server" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="text-sm font-bold text-white">Cisco CCNA (Routing & Switching)</div>
+            <div class="text-xs text-slate-400">Enterprise Network Associate</div>
+          </div>
+        </div>
+
+        <div class="glass-panel px-6 py-4 rounded-2xl flex items-center gap-4 min-w-[290px] border border-white/10">
+          <div class="w-11 h-11 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+            <i data-lucide="terminal" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="text-sm font-bold text-white">Certified Ethical Hacker (CEH)</div>
+            <div class="text-xs text-slate-400">Offensive & Defense Tactics</div>
+          </div>
+        </div>
+
+        <div class="glass-panel px-6 py-4 rounded-2xl flex items-center gap-4 min-w-[290px] border border-white/10">
+          <div class="w-11 h-11 rounded-xl bg-violet-500/10 border border-violet-500/30 flex items-center justify-center text-violet-400">
+            <i data-lucide="crosshair" class="w-5 h-5"></i>
+          </div>
+          <div>
+            <div class="text-sm font-bold text-white">eJPT (Junior Pentester)</div>
+            <div class="text-xs text-slate-400">Hands-on Practical Assessment</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       7. CONTACT SECTION (Integrasi Email Langsung ke nnaufalbilal@gmail.com)
+       ========================================================================== -->
+  <section id="contact" class="py-24 relative z-10 border-t border-white/5">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/5 border border-white/10 text-emerald-400 text-xs font-medium mb-3">
+          <i data-lucide="send" class="w-3.5 h-3.5"></i>
+          <span>Get in Touch Directly</span>
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+          Mulai Diskusi atau Kolaborasi Proyek
+        </h2>
+        <p class="text-slate-400 mt-3 text-sm sm:text-base">
+          Tertarik mendiskusikan penguatan sistem keamanan siber, audit penetrasi, atau peluang kerjasama profesional? Kirim pesan dan pesan Anda akan <span class="text-emerald-400 font-semibold">langsung masuk ke inbox email Bilal</span>.
+        </p>
+        <div class="w-16 h-1 bg-gradient-to-r from-emerald-500 via-cyan-500 to-violet-500 mx-auto mt-4 rounded-full"></div>
+      </div>
+
+      <!-- Contact Main Card -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+        
+        <!-- Left Column: Direct Info & Quick Copy (5 cols) -->
+        <div class="lg:col-span-5 glass-panel rounded-2xl p-8 flex flex-col justify-between reveal">
+          <div class="space-y-6">
+            <div>
+              <h3 class="text-2xl font-bold text-white">Mari Terhubung</h3>
+              <p class="text-sm text-slate-300 mt-2 leading-relaxed">
+                Saya selalu terbuka untuk konsultasi teknis keamanan jaringan, peran profesional dalam tim SOC, proyek rekayasa sistem, atau inisiatif audit keamanan.
+              </p>
+            </div>
+
+            <!-- Direct Contact List -->
+            <div class="space-y-4 pt-2">
+              
+              <!-- Direct Verified Email Card -->
+              <div class="p-4 rounded-xl bg-white/5 border border-emerald-500/25 hover:border-emerald-500/50 transition">
+                <div class="flex items-center justify-between mb-2">
+                  <div class="flex items-center gap-2 text-xs text-emerald-400 font-mono font-medium">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 pulse-dot"></span>
+                    Verified Official Email
+                  </div>
+                  <button id="copy-email-card-btn" class="text-xs text-slate-400 hover:text-emerald-400 transition flex items-center gap-1 px-2 py-0.5 rounded bg-white/5 border border-white/10" title="Salin Email">
+                    <i data-lucide="copy" class="w-3 h-3"></i>
+                    <span>Salin</span>
+                  </button>
+                </div>
+                <a href="mailto:nnaufalbilal@gmail.com" class="text-base font-bold text-white hover:text-emerald-400 transition break-all font-mono">
+                  nnaufalbilal@gmail.com
+                </a>
+                <div class="mt-3 flex items-center gap-2">
+                  <a href="mailto:nnaufalbilal@gmail.com?subject=Kolaborasi%20Keamanan%20Siber%20dengan%20Bilal" class="w-full btn-primary py-1.5 px-3 rounded-lg text-xs font-semibold flex items-center justify-center gap-1.5">
+                    <i data-lucide="mail" class="w-3.5 h-3.5"></i>
+                    <span>Buka Aplikasi Email</span>
+                  </a>
+                </div>
+              </div>
+
+              <!-- LinkedIn Profile -->
+              <div class="flex items-center justify-between p-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-cyan-500/30 transition">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-10 h-10 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 shrink-0">
+                    <i data-lucide="linkedin" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <div class="text-xs text-slate-400">LinkedIn Network</div>
+                    <div class="text-sm font-semibold text-white">Muhammad Naufal Bilal Syam</div>
+                  </div>
+                </div>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-white/5 hover:bg-cyan-500/20 text-slate-300 hover:text-cyan-300 transition" aria-label="Kunjungi LinkedIn">
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </a>
+              </div>
+
+              <!-- GitHub Profile -->
+              <div class="flex items-center justify-between p-3.5 rounded-xl bg-white/5 border border-white/10 hover:border-violet-500/30 transition">
+                <div class="flex items-center gap-3.5">
+                  <div class="w-10 h-10 rounded-lg bg-violet-500/10 border border-violet-500/30 flex items-center justify-center text-violet-400 shrink-0">
+                    <i data-lucide="github" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <div class="text-xs text-slate-400">GitHub Repository</div>
+                    <div class="text-sm font-semibold text-white">github.com/nnaufalbilal</div>
+                  </div>
+                </div>
+                <a href="https://github.com/nnaufalbilal" target="_blank" rel="noopener noreferrer" class="p-2 rounded-lg bg-white/5 hover:bg-violet-500/20 text-slate-300 hover:text-violet-300 transition" aria-label="Kunjungi GitHub">
+                  <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Fast Response Notice -->
+          <div class="mt-8 pt-6 border-t border-white/10 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 pulse-dot"></span>
+              <span class="text-xs text-slate-300">Waktu respon rata-rata: <strong class="text-white">&lt; 24 Jam</strong></span>
+            </div>
+            <span class="text-xs text-slate-500 font-mono">WIB (UTC+7)</span>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Direct Contact Form (7 cols) -->
+        <div class="lg:col-span-7 glass-panel rounded-2xl p-8 sm:p-9 border border-white/10 reveal reveal-delay-1">
+          <form id="contact-form" class="space-y-5" action="https://formsubmit.co/nnaufalbilal@gmail.com" method="POST">
+            
+            <!-- Hidden configuration for FormSubmit -->
+            <input type="hidden" name="_subject" value="New Inquiry from Portfolio - Muhammad Naufal Bilal Syam">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <!-- Sender Name -->
+              <div>
+                <label for="sender_name" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                  Nama Anda / Organisasi <span class="text-emerald-400">*</span>
+                </label>
+                <input 
+                  type="text" 
+                  id="sender_name" 
+                  name="name" 
+                  required 
+                  placeholder="Contoh: Sarah / PT Teknologi"
+                  class="form-input"
+                >
+              </div>
+
+              <!-- Sender Email -->
+              <div>
+                <label for="user_email" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                  Email Anda <span class="text-emerald-400">*</span>
+                </label>
+                <input 
+                  type="email" 
+                  id="user_email" 
+                  name="email" 
+                  required 
+                  placeholder="name@organization.com"
+                  class="form-input"
+                >
+              </div>
+            </div>
+
+            <!-- Subject Field -->
+            <div>
+              <label for="subject" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                Subjek Keperluan <span class="text-emerald-400">*</span>
+              </label>
+              <input 
+                type="text" 
+                id="subject" 
+                name="subject" 
+                required 
+                placeholder="Konsultasi: SOC Operations / Penetration Testing / Network"
+                class="form-input"
+              >
+            </div>
+
+            <!-- Message Field -->
+            <div>
+              <label for="execute_message" class="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-2">
+                Pesan / Kebutuhan Proyek <span class="text-emerald-400">*</span>
+              </label>
+              <textarea 
+                id="execute_message" 
+                name="message" 
+                rows="5" 
+                required 
+                placeholder="Tuliskan detail ruang lingkup proyek, target pengujian, atau pesan kolaborasi Anda di sini..."
+                class="form-input resize-none"
+              ></textarea>
+            </div>
+
+            <!-- Direct Delivery Guarantee Info -->
+            <div class="flex items-center gap-2 text-xs text-slate-400">
+              <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400 shrink-0"></i>
+              <span>Pesan dikirim secara aman langsung ke <strong class="text-slate-200">nnaufalbilal@gmail.com</strong></span>
+            </div>
+
+            <!-- Feedback Message Banner -->
+            <div id="form-feedback" class="hidden text-xs font-medium p-3.5 rounded-xl border"></div>
+
+            <!-- Submit Button: "Kirim Pesan ke Bilal" -->
+            <button 
+              type="submit" 
+              id="submit-btn" 
+              class="w-full btn-primary py-4 rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-lg"
+            >
+              <span id="btn-text">Kirim Pesan ke Bilal</span>
+              <span id="btn-spinner" class="hidden">
+                <svg class="animate-spin h-4 w-4 text-white" fill="none" viewBox="0 0 24 24">
+                  <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                  <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+              </span>
+              <i data-lucide="send" class="w-4 h-4"></i>
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       INTERACTIVE CYBER TERMINAL DRAWER / MODAL
+       ========================================================================== -->
+  <div id="terminal-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div id="terminal-backdrop" class="fixed inset-0 bg-black/85 backdrop-blur-md transition-opacity"></div>
+    
+    <div id="terminal-container" class="relative w-full max-w-3xl rounded-2xl overflow-hidden border border-emerald-500/40 z-10 shadow-2xl flex flex-col max-h-[85vh]">
+      <!-- Terminal Window Bar -->
+      <div class="terminal-header px-4 py-3 flex items-center justify-between bg-[#0e1628] border-b border-white/10 select-none">
+        <div class="flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-red-500/80 cursor-pointer" id="terminal-close-dot" title="Tutup"></span>
+          <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+          <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+          <span class="text-xs font-mono text-slate-300 ml-2">bilal@cybersec-lab:~# interactive-cli</span>
+        </div>
+        <button id="terminal-close-btn" class="text-slate-400 hover:text-white transition" aria-label="Close Terminal">
+          <i data-lucide="x" class="w-4 h-4"></i>
+        </button>
+      </div>
+
+      <!-- Terminal Output Scrollable Area -->
+      <div id="terminal-output" class="terminal-body p-5 overflow-y-auto flex-1 space-y-2 leading-relaxed select-text min-h-[280px]">
+        <div class="text-emerald-400 font-bold">
+          [+] Cybersecurity Command Interface initialized for: Muhammad Naufal Bilal Syam
+        </div>
+        <div class="text-slate-400 text-xs">
+          Ketik <span class="text-cyan-400 font-semibold">'help'</span> untuk melihat daftar perintah yang tersedia.
+        </div>
+      </div>
+
+      <!-- Terminal Input Line -->
+      <div class="p-3.5 bg-black/60 border-t border-white/10 flex items-center gap-2 font-mono text-sm">
+        <span class="text-emerald-400 font-bold">bilal@sec:~$</span>
+        <input 
+          type="text" 
+          id="terminal-input-field" 
+          class="terminal-input" 
+          placeholder="Ketik perintah... (contoh: 'skills', 'projects', 'contact', 'whoami')"
+          autocomplete="off"
+          spellcheck="false"
+        >
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       INTERACTIVE PROJECT DETAILS MODAL
+       ========================================================================== -->
+  <div id="project-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div id="modal-backdrop" class="fixed inset-0 bg-black/85 backdrop-blur-md transition-opacity"></div>
+
+    <div class="relative glass-panel rounded-3xl max-w-2xl w-full p-6 sm:p-8 z-10 border border-white/20 shadow-2xl overflow-y-auto max-h-[90vh]">
+      <!-- Close Button -->
+      <button id="modal-close-btn" class="absolute top-5 right-5 p-2 rounded-xl bg-white/5 hover:bg-white/15 text-slate-300 hover:text-white transition" aria-label="Close Modal">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+
+      <!-- Category & Client -->
+      <div class="flex items-center gap-2 mb-2">
+        <span id="modal-category" class="tag-badge tag-emerald text-xs">Category</span>
+      </div>
+
+      <h3 id="modal-title" class="text-2xl font-bold text-white mb-1">Project Title</h3>
+      <p id="modal-client" class="text-xs text-emerald-400 font-mono mb-4">Client Organization</p>
+
+      <!-- Modal Quick Links Bar -->
+      <div class="flex flex-wrap gap-2.5 my-4 p-3 rounded-xl bg-white/5 border border-white/10">
+        <a id="modal-web-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-cyber-cyan py-1.5 px-3.5 rounded-lg text-xs font-semibold flex items-center gap-1.5">
+          <i data-lucide="globe" class="w-3.5 h-3.5"></i>
+          <span>Buka Live Web App</span>
+        </a>
+        <a id="modal-github-link" href="#" target="_blank" rel="noopener noreferrer" class="btn-secondary py-1.5 px-3.5 rounded-lg text-xs font-semibold flex items-center gap-1.5">
+          <i data-lucide="github" class="w-3.5 h-3.5"></i>
+          <span>Source Code</span>
+        </a>
+      </div>
+
+      <div class="w-full h-px bg-white/10 my-4"></div>
+
+      <!-- Description & Highlights -->
+      <div class="space-y-4">
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-1.5 font-mono">Overview</h4>
+          <p id="modal-description" class="text-sm text-slate-300 leading-relaxed"></p>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2 font-mono">Key Technical Highlights & Impact</h4>
+          <ul id="modal-highlights" class="space-y-2"></ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2 font-mono">Applied Technologies</h4>
+          <div id="modal-tech" class="flex flex-wrap gap-2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FLOATING QUICK CONTROLS (Terminal & Back to Top)
+       ========================================================================== -->
+  <div class="fixed bottom-6 left-6 z-40 flex items-center gap-2">
+    <button id="floating-terminal-btn" class="floating-tool-btn px-3.5 py-2.5 rounded-xl text-xs font-mono font-semibold flex items-center gap-2 shadow-xl" title="Buka Cyber CLI Terminal">
+      <i data-lucide="terminal" class="w-4 h-4 text-emerald-400"></i>
+      <span class="hidden sm:inline">CLI Terminal</span>
+    </button>
+  </div>
+
+  <div class="fixed bottom-6 right-6 z-40">
+    <button id="back-to-top-btn" class="floating-tool-btn p-3 rounded-xl shadow-xl hidden" aria-label="Back to Top" title="Kembali ke atas">
+      <i data-lucide="arrow-up" class="w-4 h-4"></i>
+    </button>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="py-12 relative z-10 border-t border-white/5 text-center text-slate-400 text-xs bg-[#050811]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+      <div class="flex justify-center items-center gap-6 text-sm text-slate-300">
+        <a href="#hero" class="hover:text-emerald-400 transition">Home</a>
+        <a href="#about" class="hover:text-emerald-400 transition">About</a>
+        <a href="#skills" class="hover:text-emerald-400 transition">Arsenal</a>
+        <a href="#projects" class="hover:text-emerald-400 transition">Projects</a>
+        <a href="#certifications" class="hover:text-emerald-400 transition">Credentials</a>
+        <a href="#contact" class="hover:text-emerald-400 transition">Contact</a>
+      </div>
+      <p class="font-mono text-slate-400">
+        Designed & Developed with Cyber-Luxury Excellence for <span class="text-white font-semibold">Muhammad Naufal Bilal Syam</span>.
+      </p>
+      <p class="text-[11px] text-slate-500">
+        Direct Email: <a href="mailto:nnaufalbilal@gmail.com" class="text-emerald-400 hover:underline">nnaufalbilal@gmail.com</a> &bull; &copy; 2026 Muhammad Naufal Bilal Syam. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="script.js"></script>
+</body>
+</html>
